@@ -1,5 +1,7 @@
 ### Star Wars heroes
 
+- [Demo](https://star-wars-eight-zeta.vercel.app/)
+
 ### Used technologies
 
 - React
@@ -41,9 +43,9 @@
 
 5. Start the development server:
 
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 
 6. Preview command open your browser on http://localhost:3000.
 
