@@ -29,7 +29,7 @@ import { generateFilmNodes } from './utils/graphHelper/generateFilmNodes';
 import { generateStarshipsNodes } from './utils/graphHelper/generateStarshipsNodes';
 import { generateHeroFilmEdges } from './utils/graphHelper/generateHeroFilmEdges';
 import { generateFilmStarshipEdges } from './utils/graphHelper/generateFilmStarshipEdges';
-import { big, large, middle } from './constants/screenSizeBreakpoints';
+import { large, middle } from './constants/screenSizeBreakpoints';
 import { ErrorMessage } from './components/ErrorMessage';
 
 export default function Home() {
@@ -159,7 +159,7 @@ export default function Home() {
 
   return (
     <>
-      <h1 className='mb-7 mt-4 text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl'>
+      <h1 className='mt-4 text-4xl font-extrabold leading-none tracking-tight text-center text-gray-900 mb-7 md:text-5xl lg:text-6xl'>
         Star Wars heroes
       </h1>
       {isLoaderShown && <Loader />}
@@ -198,7 +198,7 @@ export default function Home() {
 
           {isGraphShown && (
             <ReactFlow
-              onInit={(instance) => setTimeout(instance.fitView)}
+              fitView
               nodes={nodes}
               edges={edges}
               onNodesChange={onNodesChange}

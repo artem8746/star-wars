@@ -41,9 +41,9 @@
 
 5. Start the development server:
 
-```bash
-npm start
-```
+    ```bash
+    npm start
+    ```
 
 6. Preview command open your browser on http://localhost:3000.
 
