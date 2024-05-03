@@ -74,6 +74,10 @@ Your app is ready to be deployed!
 
 Runs linter.
 
+### npm test
+
+Runs tests
+
 ### npm run format
 
 Runs prettier
@@ -85,3 +89,4 @@ Runs prettier and writes changes
 ### npm run deploy
 
 Deploys your application to the vercel.
+
