@@ -5,7 +5,6 @@
 ### Used technologies
 
 - React
-- Typescript
 - Next.js
 - TypeScript
 - Redux-Toolkit
@@ -89,4 +88,3 @@ Runs prettier and writes changes
 ### npm run deploy
 
 Deploys your application to the vercel.
-
