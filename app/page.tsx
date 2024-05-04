@@ -133,20 +133,14 @@ export default function Home() {
 
     switch (true) {
       case windowWidth > large:
-        console.log('large');
-
         dispatch(heroesActions.fetchHeroes(3));
         break;
 
       case windowWidth > middle:
-        console.log('middle');
-
         dispatch(heroesActions.fetchHeroes(2));
         break;
 
       default:
-        console.log('default');
-
         dispatch(heroesActions.fetchHeroes(1));
         break;
     }

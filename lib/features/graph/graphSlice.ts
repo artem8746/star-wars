@@ -56,7 +56,6 @@ export const graphSlice = createAppSlice({
           state.status = 'idle';
           state.starships = action.payload.starships;
           state.films = action.payload.films;
-          console.log(action.payload);
         },
         rejected: (state) => {
           state.status = 'failed';
