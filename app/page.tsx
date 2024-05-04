@@ -188,34 +188,33 @@ export default function Home() {
         </div>
       )}
 
-      {isModalShown && (
-        <ModalView
-          handleClickOutside={handleModalClickOutside}
-          handleModalClose={() => setIsModalShown(false)}
-          title={hero!.name}
-        >
-          {isGraphLoaderShown && <Loader />}
+      <ModalView
+        isModalShown={isModalShown}
+        handleClickOutside={handleModalClickOutside}
+        handleModalClose={() => setIsModalShown(false)}
+        title={hero!.name}
+      >
+        {isGraphLoaderShown && <Loader />}
 
-          {isGraphShown && (
-            <ReactFlow
-              fitView
-              nodes={nodes}
-              edges={edges}
-              onNodesChange={onNodesChange}
-            >
-              <Controls />
-              <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
-            </ReactFlow>
-          )}
+        {isGraphShown && (
+          <ReactFlow
+            fitView
+            nodes={nodes}
+            edges={edges}
+            onNodesChange={onNodesChange}
+          >
+            <Controls />
+            <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
+          </ReactFlow>
+        )}
 
-          {isGraphErrorShown && (
-            <ErrorMessage
-              title='Request failed'
-              message='Failed to load graph info'
-            />
-          )}
-        </ModalView>
-      )}
+        {isGraphErrorShown && (
+          <ErrorMessage
+            title='Request failed'
+            message='Failed to load graph info'
+          />
+        )}
+      </ModalView>
     </>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 
 interface Props {
   handleClickOutside: (
@@ -7,6 +8,7 @@ interface Props {
   handleModalClose: () => void;
   title: string;
   children: React.ReactNode;
+  isModalShown: boolean;
 }
 
 export const ModalView: React.FC<Props> = ({
@@ -14,21 +16,25 @@ export const ModalView: React.FC<Props> = ({
   handleClickOutside,
   title,
   children,
+  isModalShown,
 }) => {
   return (
     <div
-      className='fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none'
+      className={
+        cn('fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none', {
+          hidden: !isModalShown,
+        })}
       onClick={handleClickOutside}
     >
-      <div className='relative h-4/6 w-full sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl'>
-        <div className='relative flex h-full w-full flex-col rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none'>
-          <div className='border-blueGray-200 flex items-start justify-between rounded-t border-b border-solid p-5'>
+      <div className='relative w-full h-4/6 sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl'>
+        <div className='relative flex flex-col w-full h-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none'>
+          <div className='flex items-start justify-between p-5 border-b border-solid rounded-t border-blueGray-200'>
             <h3 className='text-3xl font-semibold'>{title}</h3>
             <button
-              className='float-right ml-auto border-0 bg-transparent p-1 text-3xl font-semibold leading-none text-black outline-none focus:outline-none'
+              className='float-right p-1 ml-auto text-3xl font-semibold leading-none text-black bg-transparent border-0 outline-none focus:outline-none'
               onClick={handleModalClose}
             >
-              <span className='block h-6 w-6 text-2xl text-black outline-none focus:outline-none'>
+              <span className='block w-6 h-6 text-2xl text-black outline-none focus:outline-none'>
                 ×
               </span>
             </button>
