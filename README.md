@@ -1,6 +1,7 @@
 ### Star Wars heroes
 
 - [Demo](https://star-wars-eight-zeta.vercel.app/)
+- [PRESENTATION VIDEO](https://www.loom.com/share/389622dd5d604f07b49c82cf52674183?sid=56988a7e-a811-4bdc-aa03-b391bb5d7a2a)
 
 ### Used technologies
 
